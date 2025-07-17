@@ -144,7 +144,7 @@ class _ParcTabState extends State<ParcTab> {
           }
         }
       } else if (etatValidation == 'Rejeté' && operation['action'] == 'Ajouter' && operation['parc_id'] != null) {
-        // لا شيء يتم إدراجه إذا كانت Rejeté
+        
       }
 
       await _fetchOperations();
