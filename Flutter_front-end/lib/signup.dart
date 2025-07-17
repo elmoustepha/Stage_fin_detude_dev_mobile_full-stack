@@ -101,8 +101,8 @@ class _InscrireState extends State<Inscrire> {
         : "Menu";
 
     final width = MediaQuery.of(context).size.width;
-    final formWidth = width * 0.50; // عرض الاستمارة (50% كما طلبت)
-    final fieldWidth = formWidth * 0.50; // عرض الحقول (50% من عرض الاستمارة كما طلبت)
+    final formWidth = width * 0.50; 
+    final fieldWidth = formWidth * 0.50;
 
     return Scaffold(
       appBar: AppBar(
@@ -197,7 +197,7 @@ class _InscrireState extends State<Inscrire> {
       body: Center(
         child: SingleChildScrollView(
           child: Container(
-            width: formWidth, // عرض الاستمارة
+            width: formWidth,
             padding: const EdgeInsets.all(24.0),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -229,19 +229,19 @@ class _InscrireState extends State<Inscrire> {
                   ),
                   const SizedBox(height: 16),
                   SizedBox(
-                    width: fieldWidth, // عرض حقل NNI
+                    width: fieldWidth, 
                     child: champText(_nniController, 'NNI', TextInputType.number, icon: Icons.badge),
                   ),
                   SizedBox(
-                    width: fieldWidth, // عرض حقل Nom
+                    width: fieldWidth, 
                     child: champText(_nomController, 'Nom', TextInputType.text, icon: Icons.person),
                   ),
                   SizedBox(
-                    width: fieldWidth, // عرض حقل Prénom
+                    width: fieldWidth, 
                     child: champText(_prenomController, 'Prénom', TextInputType.text, icon: Icons.person_outline),
                   ),
                   SizedBox(
-                    width: fieldWidth, // عرض حقل Email
+                    width: fieldWidth, 
                     child: champText(
                       _emailController,
                       'Email',
@@ -270,7 +270,7 @@ class _InscrireState extends State<Inscrire> {
                     ),
                   ),
                   SizedBox(
-                    width: fieldWidth, // عرض حقل Type
+                    width: fieldWidth, 
                     child: dropdownField(
                       label: 'Type',
                       value: _selectedType,
@@ -280,7 +280,7 @@ class _InscrireState extends State<Inscrire> {
                     ),
                   ),
                   SizedBox(
-                    width: fieldWidth, // عرض حقل État
+                    width: fieldWidth, 
                     child: dropdownField(
                       label: 'État',
                       value: _selectedEtat,
