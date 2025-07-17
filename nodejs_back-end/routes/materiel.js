@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-// Ajouter matériel (مع الربط بـ userId)
+// Ajouter matériel
 router.post('/ajouter', (req, res) => {
   const { type, marque, modele, userId } = req.body;
   if (!userId) {
@@ -15,7 +15,7 @@ router.post('/ajouter', (req, res) => {
   });
 });
 
-// Afficher tous les matériels (مع إمكانية التصفية حسب userId)
+// Afficher tous les matériels
 router.get('/all', (req, res) => {
   const { userId } = req.query;
   let sql = 'SELECT * FROM materiel';
@@ -30,7 +30,7 @@ router.get('/all', (req, res) => {
   });
 });
 
-// Modifier matériel par ID (بدون تغيير userId)
+// Modifier matériel par ID
 router.put('/:id', (req, res) => {
   const { id } = req.params;
   const { type, marque, modele } = req.body;
